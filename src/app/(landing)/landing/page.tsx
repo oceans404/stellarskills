@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import {
   Badge,
+  Button,
   Card,
   Icon,
   Logo,
@@ -269,26 +270,26 @@ export default function LandingPage() {
       <header className="SkillsLanding__header">
         <div className="SkillsLanding__logo">
           <Logo.Stellar />
-          <Badge variant="secondary" size="sm">Skills</Badge>
+          <Badge variant="secondary" size="md">Skills</Badge>
         </div>
 
         <div className="SkillsLanding__headerActions">
-          <a
-            href="https://developers.stellar.org/docs"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="SkillsLanding__headerLink"
-          >
-            <span>Developer docs</span>
-            <Icon.LinkExternal01 />
-          </a>
-
           <Hydration>
             <ThemeSwitch
               storageKeyId={LOCAL_STORAGE_SAVED_THEME}
               onActionEnd={handleThemeChange}
             />
           </Hydration>
+
+          <Button
+            variant="tertiary"
+            size="md"
+            icon={<Icon.LinkExternal01 />}
+            iconPosition="right"
+            onClick={() => window.open("https://developers.stellar.org/docs", "_blank", "noopener,noreferrer")}
+          >
+            Developer docs
+          </Button>
         </div>
       </header>
 
@@ -336,7 +337,7 @@ export default function LandingPage() {
           {SkillCards.map((c, idx) => (
             <Card key={`${c.title}-${idx}`}>
               <div className="SkillsCard">
-                <Badge variant="secondary">Badge</Badge>
+                <Badge variant="secondary" size="sm">Badge</Badge>
                 <h2 className="SkillsCard__title">{c.title}</h2>
 
                 <p className="SkillsCard__description">{c.description}</p>
@@ -353,7 +354,7 @@ export default function LandingPage() {
             {EcosystemCards.map((c, idx) => (
               <Card key={`ecosystem-${c.title}-${idx}`}>
                 <div className="SkillsCard">
-                  <Badge variant="secondary">Badge</Badge>
+                  <Badge variant="secondary" size="sm">Badge</Badge>
                   <h3 className="SkillsCard__title">{c.title}</h3>
 
                   <p className="SkillsCard__description">{c.description}</p>
