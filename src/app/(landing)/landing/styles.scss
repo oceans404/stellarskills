@@ -1,0 +1,455 @@
+@use "@/styles/utils.scss" as *;
+
+.SkillsLanding {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--sds-clr-gray-02);
+  color: var(--sds-clr-gray-12);
+}
+
+// =============================================================================
+// Footer
+// =============================================================================
+.SkillsLanding__footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: pxToRem(60px);
+  padding: 0 pxToRem(24px);
+  margin-top: auto;
+  border-top: 1px solid var(--sds-clr-gray-06);
+}
+
+.SkillsLanding__footerText {
+  font-family: "Inter", sans-serif;
+  font-size: pxToRem(14px);
+  font-weight: 500;
+  color: var(--sds-clr-gray-09);
+}
+
+.SkillsLanding__footerLink {
+  color: var(--sds-clr-lilac-11);
+  text-decoration: none;
+  transition: color var(--sds-anim-transition-default);
+
+  @media (hover: hover) {
+    &:hover {
+      color: var(--sds-clr-lilac-09);
+    }
+  }
+}
+
+// =============================================================================
+// Agent view (raw SKILL.md)
+// =============================================================================
+.SkillsLanding__agentView {
+  min-height: 100vh;
+  background-color: var(--sds-clr-gray-01);
+  padding: pxToRem(24px);
+}
+
+.SkillsLanding__agentContent {
+  font-family: "Roboto Mono", monospace;
+  font-size: pxToRem(14px);
+  line-height: 1.6;
+  color: var(--sds-clr-gray-12);
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  margin: 0;
+}
+
+// =============================================================================
+// Header
+// =============================================================================
+.SkillsLanding__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: pxToRem(16px);
+
+  padding: pxToRem(14px) pxToRem(20px);
+  border-bottom: 1px solid var(--sds-clr-gray-06);
+  background-color: var(--sds-clr-gray-01);
+}
+
+.SkillsLanding__headerActions {
+  display: flex;
+  align-items: center;
+  gap: pxToRem(16px);
+}
+
+.SkillsLanding__headerLink {
+  display: inline-flex;
+  align-items: center;
+  gap: pxToRem(4px);
+  font-family: "Inter", sans-serif;
+  font-size: pxToRem(14px);
+  font-weight: 500;
+  color: var(--sds-clr-gray-09);
+  text-decoration: none;
+  transition: color var(--sds-anim-transition-default);
+
+  svg {
+    width: pxToRem(16px);
+    height: pxToRem(16px);
+    stroke: currentColor;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      color: var(--sds-clr-gray-11);
+    }
+  }
+}
+
+// =============================================================================
+// Main content
+// =============================================================================
+.SkillsLanding__main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  max-width: pxToRem(860px);
+  width: 100%;
+  margin: 0 auto;
+  padding: pxToRem(48px) pxToRem(20px) pxToRem(40px);
+
+  @media (max-width: 768px) {
+    padding: pxToRem(32px) pxToRem(16px) pxToRem(32px);
+  }
+}
+
+// =============================================================================
+// Hero section
+// =============================================================================
+.SkillsLanding__hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: pxToRem(48px);
+}
+
+.SkillsLanding__title {
+  font-family: "Inconsolata", monospace;
+  font-size: pxToRem(64px);
+  font-weight: 600;
+  letter-spacing: -4px;
+  line-height: pxToRem(54px);
+  color: var(--sds-clr-gray-12);
+  margin: 0 0 pxToRem(24px) 0;
+
+  @media (max-width: 768px) {
+    font-size: pxToRem(48px);
+    line-height: pxToRem(42px);
+  }
+}
+
+.SkillsLanding__subtitle {
+  font-family: "Inter", sans-serif;
+  font-size: pxToRem(16px);
+  line-height: 1.5;
+  margin: 0 0 pxToRem(32px) 0;
+  color: var(--sds-clr-gray-09);
+}
+
+// =============================================================================
+// Mode toggle
+// =============================================================================
+.SkillsLanding__modeToggle {
+  display: inline-flex;
+  align-items: center;
+  gap: pxToRem(4px);
+  padding: pxToRem(4px);
+  margin: 0 auto pxToRem(24px);
+  background-color: var(--sds-clr-gray-03);
+  border: 1px solid var(--sds-clr-gray-06);
+  border-radius: pxToRem(999px);
+}
+
+.SkillsLanding__modeButton {
+  display: inline-flex;
+  align-items: center;
+  gap: pxToRem(6px);
+  padding: pxToRem(8px) pxToRem(16px);
+  border: none;
+  border-radius: pxToRem(999px);
+  background-color: transparent;
+  cursor: pointer;
+  font-family: "Inter", sans-serif;
+  font-size: pxToRem(14px);
+  font-weight: var(--sds-fw-medium);
+  color: var(--sds-clr-gray-09);
+  transition:
+    background-color var(--sds-anim-transition-default),
+    color var(--sds-anim-transition-default);
+
+  svg {
+    width: pxToRem(16px);
+    height: pxToRem(16px);
+    stroke: currentColor;
+  }
+
+  @media (hover: hover) {
+    &:hover:not([data-is-active="true"]) {
+      color: var(--sds-clr-gray-11);
+    }
+  }
+
+  &[data-is-active="true"] {
+    background-color: var(--sds-clr-gray-01);
+    color: var(--sds-clr-lilac-11);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  }
+}
+
+// =============================================================================
+// Tabs
+// =============================================================================
+.SkillsLanding__tabs {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: pxToRem(24px);
+  flex-wrap: wrap;
+  margin: 0 auto pxToRem(16px);
+}
+
+.SkillsLanding__tab {
+  font-family: "Inter", sans-serif;
+  font-size: pxToRem(14px);
+  font-weight: var(--sds-fw-medium);
+  border: none;
+  background: transparent;
+  padding: pxToRem(6px) pxToRem(2px);
+  cursor: pointer;
+  color: var(--sds-clr-gray-09);
+  transition: color var(--sds-anim-transition-default);
+  position: relative;
+
+  @media (hover: hover) {
+    &:hover {
+      color: var(--sds-clr-gray-11);
+    }
+  }
+
+  &[data-is-active="true"] {
+    color: var(--sds-clr-lilac-11);
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: pxToRem(2px);
+      background-color: var(--sds-clr-lilac-09);
+      border-radius: pxToRem(999px);
+    }
+  }
+}
+
+// =============================================================================
+// Copy pill
+// =============================================================================
+.SkillsLanding__pill {
+  display: flex;
+  justify-content: center;
+}
+
+.SkillsCopyPill__wrapper {
+  display: inline-flex;
+  align-items: center;
+  gap: pxToRem(8px);
+  position: relative;
+}
+
+.SkillsCopyPill {
+  display: inline-flex;
+  align-items: center;
+  gap: pxToRem(8px);
+
+  padding: pxToRem(6px) pxToRem(10px);
+  background-color: var(--sds-clr-gray-03);
+  border: 1px solid var(--sds-clr-gray-06);
+  border-radius: pxToRem(6px);
+  cursor: pointer;
+  transition:
+    background-color var(--sds-anim-transition-default),
+    border-color var(--sds-anim-transition-default);
+
+  @media (hover: hover) {
+    &:hover:not([data-copied="true"]) {
+      border-color: var(--sds-clr-gray-08);
+
+      .SkillsCopyPill__text,
+      .SkillsCopyPill__copyIcon {
+        color: var(--sds-clr-lilac-11);
+      }
+    }
+  }
+
+  &[data-copied="true"] {
+    background-color: var(--sds-clr-green-03);
+    border-color: var(--sds-clr-green-06);
+
+    .SkillsCopyPill__text,
+    .SkillsCopyPill__copyIcon {
+      color: var(--sds-clr-green-11);
+    }
+  }
+}
+
+.SkillsCopyPill__text {
+  font-family: "Roboto Mono", monospace;
+  font-size: pxToRem(13px);
+  line-height: 1.4;
+  color: var(--sds-clr-gray-12);
+  transition: color var(--sds-anim-transition-default);
+}
+
+.SkillsCopyPill__copyIcon {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--sds-clr-gray-09);
+  transition: color var(--sds-anim-transition-default);
+
+  svg {
+    width: pxToRem(12px);
+    height: pxToRem(12px);
+    stroke: currentColor;
+  }
+}
+
+// =============================================================================
+// Skills cards
+// =============================================================================
+.SkillsLanding__cards {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  flex: 1;
+
+  .Card {
+    --Card-color-border: var(--sds-clr-gray-06);
+  }
+}
+
+.SkillsCard {
+  background-color: var(--sds-clr-gray-01);
+
+  .Badge {
+    margin-bottom: pxToRem(8px);
+    width: fit-content;
+  }
+}
+
+h2.SkillsCard__title {
+  font-family: "Inter", sans-serif;
+  font-size: pxToRem(18px);
+  font-weight: 600;
+  line-height: pxToRem(28px);
+  margin: 0 0 pxToRem(8px) 0;
+  color: var(--sds-clr-gray-12);
+}
+
+p.SkillsCard__description {
+  font-family: "Inter", sans-serif;
+  font-size: pxToRem(14px);
+  font-weight: 500;
+  line-height: pxToRem(20px);
+  margin: 0 0 pxToRem(12px) 0;
+  color: var(--sds-clr-gray-11);
+}
+
+.SkillsCard__pathButton {
+  display: inline-flex;
+  align-items: center;
+  gap: pxToRem(6px);
+
+  padding: pxToRem(6px) pxToRem(10px);
+  border-radius: pxToRem(6px);
+  border: 1px solid var(--sds-clr-gray-06);
+  background-color: var(--sds-clr-gray-03);
+  cursor: pointer;
+  color: var(--sds-clr-gray-09);
+  transition:
+    background-color var(--sds-anim-transition-default),
+    border-color var(--sds-anim-transition-default),
+    color var(--sds-anim-transition-default);
+
+  svg {
+    width: pxToRem(12px);
+    height: pxToRem(12px);
+    stroke: currentColor;
+  }
+
+  @media (hover: hover) {
+    &:hover:not([data-copied="true"]) {
+      color: var(--sds-clr-lilac-11);
+      border-color: var(--sds-clr-gray-08);
+    }
+  }
+
+  &[data-copied="true"] {
+    background-color: var(--sds-clr-green-03);
+    border-color: var(--sds-clr-green-06);
+    color: var(--sds-clr-green-11);
+  }
+}
+
+.SkillsCard__pathWrapper {
+  display: inline-flex;
+  align-items: center;
+  gap: pxToRem(8px);
+}
+
+.SkillsCard__pathText {
+  font-family: "Roboto Mono", monospace;
+  font-size: pxToRem(12px);
+  line-height: 1.4;
+  color: var(--sds-clr-gray-12);
+}
+
+// =============================================================================
+// Ecosystem section
+// =============================================================================
+.SkillsLanding__ecosystem {
+  margin-top: pxToRem(48px);
+}
+
+.SkillsLanding__sectionTitle {
+  font-family: "Inter", sans-serif;
+  font-size: pxToRem(14px);
+  font-weight: 600;
+  line-height: pxToRem(20px);
+  margin: 0 0 pxToRem(16px) 0;
+  color: var(--sds-clr-gray-11);
+}
+
+.SkillsLanding__ecosystemGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+
+  .Card {
+    --Card-color-border: var(--sds-clr-gray-06);
+  }
+
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+h3.SkillsCard__title {
+  font-family: "Inter", sans-serif;
+  font-size: pxToRem(18px);
+  font-weight: 600;
+  line-height: pxToRem(28px);
+  margin: 0 0 pxToRem(8px) 0;
+  color: var(--sds-clr-gray-12);
+}

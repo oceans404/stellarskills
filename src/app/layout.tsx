@@ -1,7 +1,6 @@
 import React, { Suspense } from "react";
 import type { Metadata } from "next";
 
-import { LayoutMain } from "@/components/layout/LayoutMain";
 import { LayoutContextProvider } from "@/components/layout/LayoutContextProvider";
 import { WalletKitContextProvider } from "@/components/WalletKit/WalletKitContextProvider";
 import { CustomAiButton } from "@/components/CustomAiButton";
@@ -36,7 +35,7 @@ export default function RootLayout({
               <QueryProvider>
                 <LayoutContextProvider>
                   <WalletKitContextProvider>
-                    <LayoutMain>{children}</LayoutMain>
+                    {children}
                   </WalletKitContextProvider>
                   <CustomAiButton />
                 </LayoutContextProvider>

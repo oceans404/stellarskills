@@ -143,7 +143,7 @@ export default function Introduction() {
         <HomeSection
           title="Save and share your work to revisit experiment and collaborate"
           eyebrow="Save and share"
-          description="Save or share transactions anytime. They’re stored in your browser’s local storage and can be accessed from the Saved tab in the sidebar for easy reloading."
+          description="Save or share transactions anytime. They're stored in your browser's local storage and can be accessed from the Saved tab in the sidebar for easy reloading."
         >
           <SaveAndShare imgTheme={imgTheme} />
         </HomeSection>
