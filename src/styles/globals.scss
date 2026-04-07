@@ -195,7 +195,7 @@
       align-items: center;
       justify-content: space-between;
       gap: pxToRem(24px);
-      padding: pxToRem(8px) pxToRem(24px);
+      padding: pxToRem(8px) pxToRem(32px);
 
       @media screen and (max-width: 1040px) {
         padding: pxToRem(16px);

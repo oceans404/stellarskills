@@ -6,7 +6,7 @@ import {
   Badge,
   Card,
   Icon,
-  ProjectLogo,
+  Logo,
   ThemeSwitch,
 } from "@stellar/design-system";
 
@@ -267,7 +267,10 @@ export default function LandingPage() {
   return (
     <div className="SkillsLanding">
       <header className="SkillsLanding__header">
-        <ProjectLogo title="Skills" link="/landing" />
+        <div className="SkillsLanding__logo">
+          <Logo.Stellar />
+          <Badge variant="secondary" size="sm">Skills</Badge>
+        </div>
 
         <div className="SkillsLanding__headerActions">
           <a
