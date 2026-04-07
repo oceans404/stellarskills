@@ -73,6 +73,10 @@
   padding: 0 pxToRem(32px);
   border-bottom: 1px solid var(--sds-clr-gray-06);
   background-color: var(--sds-clr-gray-01);
+
+  @media screen and (max-width: 430px) {
+    padding: 0 pxToRem(16px);
+  }
 }
 
 .SkillsLanding__logo {
@@ -88,6 +92,13 @@
 
   .Badge {
     font-weight: 600;
+  }
+
+  // On mobile (≤430px), hide the Skills badge
+  @media screen and (max-width: 430px) {
+    .Badge {
+      display: none;
+    }
   }
 }
 
@@ -131,10 +142,10 @@
   max-width: pxToRem(860px);
   width: 100%;
   margin: 0 auto;
-  padding: pxToRem(48px) pxToRem(20px) pxToRem(40px);
+  padding: pxToRem(80px) pxToRem(20px) pxToRem(40px);
 
   @media (max-width: 768px) {
-    padding: pxToRem(32px) pxToRem(16px) pxToRem(32px);
+    padding: pxToRem(80px) pxToRem(16px) pxToRem(32px);
   }
 }
 
