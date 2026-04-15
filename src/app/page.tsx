@@ -65,7 +65,7 @@ const SkillCards: SkillCard[] = [
   {
     title: "Stellar Development Skill",
     description:
-      "Stellar Development Skill helps you build applications on Stellar using Soroban smart contracts, frontend integrations, and ecosystem tools.",
+      "Stellar Development Skill helps you build apps on Stellar using Soroban smart contracts, frontend integrations, and ecosystem tools.",
     pathLabel: "stellarskills.com/skill/SKILL.md",
     copyValue: "https://stellarskills.com/skill/SKILL.md",
     category: "All",
@@ -113,7 +113,7 @@ const SkillCards: SkillCard[] = [
   {
     title: "Stellar Assets",
     description:
-      "How Stellar trustlines and assets work under the hood. Covers creating, managing, and authorizing asset trustlines for tokens and custom assets.",
+      "Stellar trustlines and assets—create, manage, authorize.",
     pathLabel: "stellarskills.com/skills/assets/stellar-assets.md",
     copyValue: "https://stellarskills.com/skills/assets/stellar-assets.md",
     category: "Assets",
@@ -121,7 +121,7 @@ const SkillCards: SkillCard[] = [
   {
     title: "API RPC Horizon",
     description:
-      "Stellar's API endpoints for querying network data. Covers RPC methods, Horizon REST API, and best practices for fetching account, transaction, and ledger data.",
+      "Stellar APIs for network data—RPC, Horizon, and fetching accounts, transactions, and ledgers.",
     pathLabel: "stellarskills.com/skills/apis/api-rpc-horizon.md",
     copyValue: "https://stellarskills.com/skills/apis/api-rpc-horizon.md",
     category: "APIs",
@@ -129,7 +129,7 @@ const SkillCards: SkillCard[] = [
   {
     title: "Security",
     description:
-      "Best practices for securing Soroban smart contracts. Covers common vulnerabilities, access control patterns, and reentrancy protection.",
+      "Soroban smart contract security—vulnerabilities, access control, reentrancy.",
     pathLabel: "stellarskills.com/skills/security/security.md",
     copyValue: "https://stellarskills.com/skills/security/security.md",
     category: "Security",
@@ -137,7 +137,7 @@ const SkillCards: SkillCard[] = [
   {
     title: "Standards Reference",
     description:
-      "Stellar Ecosystem Proposals (SEPs) and protocol standards. Covers SEP implementations, interoperability standards, and compliance requirements.",
+      "Stellar SEPs and standards—implementations, interoperability, compliance.",
     pathLabel: "stellarskills.com/skills/standards/standards-reference.md",
     copyValue: "https://stellarskills.com/skills/standards/standards-reference.md",
     category: "Standards",
@@ -145,7 +145,7 @@ const SkillCards: SkillCard[] = [
   {
     title: "ZK Proofs",
     description:
-      "Zero-knowledge proofs on Stellar. Covers implementing privacy-preserving transactions and ZK verification in Soroban contracts.",
+      "Zero-knowledge proofs on Stellar—privacy transactions and Soroban verification.",
     pathLabel: "stellarskills.com/skills/zk/zk-proofs.md",
     copyValue: "https://stellarskills.com/skills/zk/zk-proofs.md",
     category: "ZK",
