@@ -637,7 +637,8 @@ p.SkillsLanding__sectionDescription {
 .SkillsLanding__ecosystemGrid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 12px;
+  column-gap: 16px;
+  row-gap: 16px;
 
   .Card {
     --Card-color-border: var(--sds-clr-gray-06);

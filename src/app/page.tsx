@@ -49,9 +49,9 @@ Agent-readable documentation for building on the Stellar network.
 Fetch any skill file to get detailed, up-to-date context for your AI agent.
 `;
 
-type FilterType = "All" | "Soroban" | "Frontend" | "Assets" | "APIs" | "Security" | "Standards" | "ZK";
+type FilterType = "All" | "Soroban" | "Frontend" | "Assets" | "APIs" | "Security" | "Standards" | "ZK" | "Ecosystem";
 
-const FILTERS: FilterType[] = ["All", "Soroban", "Frontend", "Assets", "APIs", "Security", "Standards", "ZK"];
+const FILTERS: FilterType[] = ["All", "Soroban", "Frontend", "Assets", "APIs", "Security", "Standards", "ZK", "Ecosystem"];
 
 type SkillCard = {
   title: string;
